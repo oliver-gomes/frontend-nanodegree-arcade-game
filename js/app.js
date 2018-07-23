@@ -49,15 +49,36 @@ let Player = function(x, y){
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
-Player.prototype.update = function(dt){
+Player.prototype.update = (dt) => {
 
 }
 
 
-Player.prototype.render = function(){
+Player.prototype.render = () => {
     ctx.drawImage(Resources.get(this.player), this.x, this.y);
 }
 
+
+Player.prototype.handleInput = (keyPress) => {
+    if (keyPress === 'left' && this.x > 0 ){
+        this.x -= 100;
+    }
+    if(keyPress === 'right' && this.x < 400){
+        this.x += 100;
+    }
+    if(keyPress === 'up' && this.y > 0){
+        this.y -= 80;
+    }
+    if(keyPress === 'down' && this.y < 400){
+        this.y += 80;
+    }
+    if(this.y < 0){
+        setTimeout(function (){
+            player.x = 200;
+            player.y = 400;
+        })
+    }
+}
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
