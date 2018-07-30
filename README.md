@@ -3,12 +3,12 @@ frontend-nanodegree-arcade-game
 
 This game is a project from the Front End Web Developer nanodegree by Udacity.
 
-Objective
+#Objective
 
   1.Get to the water
   2.Don't touch the bugs
 
-Controls
+#Controls
 
     left ← to move Catgirl to the left
     right → to move Catgirl to the right
